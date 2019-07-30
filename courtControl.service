@@ -1,0 +1,12 @@
+[Unit]
+Description=courtControl to control the court
+After=courtControl.service
+
+[Service]
+ExecStart=/usr/sbin/courtControl
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=network-online.target
